@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كن غيثاً</title>
+    <link rel="icon" href="https://i.ibb.co/drf9Bhg/Picsart-24-11-17-11-49-19-893.png">
+    
+    <!-- استيراد خط Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Tajawal', Arial, sans-serif; /* الخط المستخدم */
+            direction: rtl;
+            background-color: #0D0745;
+            color: #ffffff;
+            
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0D0745;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-bottom: 2px solid green;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;           
+        }
+
+        nav .logo img {
+            height: 50px;
+            margin-right: 0px;
+        }
+
+        nav .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-left: 30px;
+        }
+
+        nav .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        nav .social-icons img {
+            width: 80%;
+            height: 80%;
+        }
+
+        main {
+            padding: 80px 20px 20px; /* لتجنب تغطية المحتوى بالقائمة العلوية */
+        }
+
+        main h2 {
+            color: #4CAF50;
+            border-bottom: 3px solid #4CAF50;
+            display: inline-block;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out; /* تأثير التمرير */
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* تأثير التمرير */
+        }
+
+        .news-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-item img {
+            width: 95%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 15px;
+        }
+
+        .news-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .news-content p {
+            margin: 0;
+            color: #222222;
+            line-height: 1.6;
+            font-size: 15px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://i.ibb.co/V3vNCJB/Picsart-24-11-17-12-13-07-673.png" alt="Logo">
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/kon_ghaitha/profilecard/?igsh=bHN4c3k2N2U3cWhp" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/kon.ghaitha?mibextid=ZbWKwL" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+    </nav>
+    <main>
+     
+       <section id="about">
+    <h2>عن المؤسسة</h2>
+    <p>مؤسسة "كن غيثاً" هي مؤسسة خيرية تهدف إلى تقديم المساعدة للمحتاجين وتعزيز التكافل الاجتماعي. نعمل بشغف وإيمان لنكون غيثاً لمن يحتاج.</p>
+    <div class="buttons-container">
+        <a href="volunteer.html" class="volunteer-btn">تطوع الآن</a>
+        <a href="رابط_التبرع_هنا" class="donate-btn">تبرع الآن</a>
+    </div>
+</section>
+
+<style>
+    #about {
+        text-align: center; /* جعل النصوص في الوسط */
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center; /* جعل الأزرار في المنتصف أفقياً */
+        align-items: center; /* جعل الأزرار في المنتصف عمودياً */
+        gap: 20px; /* المسافة بين الأزرار */
+        margin-top: 20px;
+    }
+
+    .volunteer-btn, .donate-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.2rem;
+        font-family: 'Tajawal', Arial, sans-serif;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .volunteer-btn:hover, .donate-btn:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
+
+    .donate-btn {
+        background-color: #FF5722; /* لون مميز لزر التبرع */
+    }
+
+    .donate-btn:hover {
+        background-color: #e64a19; /* لون مميز عند المرور على زر التبرع */
+    }
+</style>
+
+        <section id="news">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <h2>أهم أعمالنا الخيرية</h2>
+            <div class="news-container">
+                <div class="news-item">
+                    <img src="https://i.ibb.co/sQ1mp0m/Picsart-24-11-17-12-37-05-207.jpg" alt="خبر 1">
+                    <div class="news-content">
+                        <h3>حملة مانحي الأمل</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="https://i.ibb.co/yyZXSNs/work-in-progress.pngg" alt="خبر 2">
+                    <div class="news-content">
+                        <h3>Test</h3>
+                        <p>Test...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>رقم الهاتف: <a href="tel:01503480089" style="color: #4CAF50;">01503480089</a></p>
+    <p>البريد الإلكتروني: <a href="mailto:mm0178138@gmail.com" style="color: #4CAF50;">mm0178138@gmail.com</a></p>
+</section>
+
+<style>
+      #contact {
+        margin-top: 50px;
+        text-align: right;
+    }
+
+    #contact p {
+        margin: 5px 0;
+        font-size: 1.2rem;
+        color: #ffffff;
+    }
+</style>
+
+<footer style="text-align: center; margin-top: 50px; padding: 1px 0; background-color: #0D0745; color: #ffffff; font-size: 1rem;border-top: 2px solid green;">
+    <p>®الحقوق محفوظة لـ كن غيثاً</p>
+</footer>
+
+    </main>
+
+    <script>
+        // تأثير التمرير للنصوص
+        const options = {
+            threshold: 0.4
+        };
+
+        const revealOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(revealOnScroll, options);
+        document.querySelectorAll('h2, .news-container').forEach(el => observer.observe(el));
+       
+    </script>
+</body>
+</html>
